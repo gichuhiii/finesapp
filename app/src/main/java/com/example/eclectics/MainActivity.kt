@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
 
         val loginbutton = findViewById<Button>(R.id.loginbutton)
         loginbutton.setOnClickListener{
-            val Intent = Intent(this, PaidOffencesFragment::class.java)
+            val Intent = Intent(this, Dashboard::class.java)
             startActivity(Intent)
         }
     }

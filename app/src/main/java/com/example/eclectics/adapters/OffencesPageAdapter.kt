@@ -1,4 +1,4 @@
-package com.example.eclectics
+package com.example.eclectics.adapters
 
 import android.content.Context
 import androidx.fragment.app.Fragment

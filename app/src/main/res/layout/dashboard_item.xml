@@ -2,91 +2,87 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="80dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="@dimen/_50sdp"
-        android:layout_height="@dimen/_50sdp"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="@dimen/_14sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:outlineProvider="none">
-
-        <ImageView
-            android:id="@+id/iv_totalfines"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/imagebackground"
-            android:padding="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"></ImageView>
-
-    </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_16sdp"
-        android:layout_marginLeft="@dimen/_16sdp"
+        android:layout_height="match_parent"
         app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="@dimen/_14sdp"
         app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="416dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingStart="@dimen/_40sdp"
-            android:paddingLeft="@dimen/_40sdp"
-            android:paddingTop="@dimen/_16sdp"
-            android:paddingEnd="@dimen/_16sdp"
-            android:paddingRight="@dimen/_16sdp"
-            android:paddingBottom="@dimen/_16sdp">
+            >
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/iv_offencesimage"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                app:cardBackgroundColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="10dp"
+                android:outlineProvider="none">
+
+                <ImageView
+                    android:id="@+id/iv_totalfines"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/imagebackground"
+                    android:padding="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+            </com.google.android.material.card.MaterialCardView>
 
             <TextView
                 android:id="@+id/tv_speeding"
                 android:layout_width="83dp"
                 android:layout_height="18dp"
-                android:layout_marginEnd="88dp"
                 android:fontFamily="@font/avenir_next_demi_bold"
                 android:text="SPEEDING"
                 android:textColor="@color/textcolor"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tv_paid"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.489" />
 
             <TextView
-                android:id="@+id/name"
+                android:id="@+id/tv_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/_8sdp"
-                android:layout_marginRight="@dimen/_8sdp"
+                android:layout_marginStart="10dp"
                 android:text="@string/name"
+                android:gravity="start"
                 android:textColor="@color/gray"
                 android:textSize="@dimen/_14sdp"
-                app:layout_constraintEnd_toStartOf="@+id/tv_speeding"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintStart_toEndOf="@+id/iv_offencesimage"
+                app:layout_constraintTop_toTopOf="@+id/iv_offencesimage" />
 
             <TextView
-                android:layout_width="wrap_content"
+                android:id="@+id/tv_car_reg"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Car Reg. KCR 389G"
                 android:textColor="@color/gray"
-                android:textSize="@dimen/_10sdp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@id/name"
-                app:layout_constraintTop_toBottomOf="@+id/name" />
+                android:gravity="start"
+                android:textSize="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_offencesimage"
+                app:layout_constraintEnd_toEndOf="@+id/tv_name"
+                app:layout_constraintStart_toStartOf="@id/tv_name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name" />
 
             <TextView
                 android:id="@+id/tv_paid"

@@ -292,13 +292,13 @@
         style="@style/Widget.Material3.Button.OutlinedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
         android:text="Verify DL"
         android:textColor="@color/background"
+        android:textSize="12sp"
         app:cornerRadius="5dp"
-        android:textSize="15sp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="10dp"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/verifyinsurance_button"
+        app:layout_constraintStart_toStartOf="@+id/cardViewTotalFines"
         app:layout_constraintTop_toBottomOf="@+id/cardViewTotalFines"
         app:strokeColor="@color/background" />
 
@@ -310,8 +310,9 @@
         android:layout_marginStart="8dp"
         android:text="Verify Insurance"
         android:textColor="@color/background"
-        android:textSize="15sp"
+        android:textSize="12sp"
         app:cornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/verifydl_button"
         app:layout_constraintStart_toEndOf="@+id/verifydl_button"
         app:layout_constraintTop_toTopOf="@+id/verifydl_button"
         app:strokeColor="@color/background" />
@@ -321,15 +322,16 @@
         style="@style/Widget.Material3.Button.IconButton.Filled"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:text="Book Offence"
         android:textColor="@color/white"
-        android:textSize="15sp"
+        android:textSize="12sp"
         app:cornerRadius="5dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/verifyinsurance_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/verifyinsurance_button"
-        app:layout_constraintTop_toBottomOf="@+id/cardViewFinesValue" />
+        app:layout_constraintTop_toTopOf="@+id/verifyinsurance_button" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/offencestablayout"
@@ -337,14 +339,14 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/verifyinsurance_button" >
+        app:layout_constraintTop_toBottomOf="@+id/verifydl_button">
 
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/offencesviewpager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
