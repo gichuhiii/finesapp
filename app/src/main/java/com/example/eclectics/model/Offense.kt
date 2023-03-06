@@ -10,7 +10,6 @@ data class Offense (
 )
 
 //TODO: learn below class modifiers
-
 /**
  *  a) data class
  *  b) open class

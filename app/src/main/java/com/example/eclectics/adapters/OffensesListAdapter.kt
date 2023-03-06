@@ -26,8 +26,8 @@ class OffensesListAdapter : ListAdapter<Offense, OffensesListAdapter.OffensesVie
             binding.apply {
                 tvName.text = offense.name
                 tvCarReg.text = offense.carReg
-                tvSpeeding.text = offense.offenseName
-                tvPaid.text = offense.paymentStatus
+                tvOffence.text = offense.offenseName
+                tvStatus.text = offense.paymentStatus
             }
         }
 
