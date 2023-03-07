@@ -200,14 +200,15 @@
         android:id="@+id/cardViewFinesValue"
         android:layout_width="190dp"
         android:layout_height="150dp"
-        android:layout_marginStart="212dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
         app:cardCornerRadius="10dp"
         app:cardElevation="4dp"
         app:cardUseCompatPadding="true"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardViewTotalFines"
         app:layout_constraintTop_toBottomOf="@+id/cardviewpolicedash">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -287,51 +288,61 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
-    <Button
-        android:id="@+id/verifydl_button"
-        style="@style/Widget.Material3.Button.OutlinedButton"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_buttons"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:text="Verify DL"
-        android:textColor="@color/background"
-        android:textSize="12sp"
-        app:cornerRadius="5dp"
-        app:layout_constraintEnd_toStartOf="@id/verifyinsurance_button"
         app:layout_constraintStart_toStartOf="@+id/cardViewTotalFines"
-        app:layout_constraintTop_toBottomOf="@+id/cardViewTotalFines"
-        app:strokeColor="@color/background" />
+        app:layout_constraintTop_toBottomOf="@+id/cardViewTotalFines">
 
-    <Button
-        android:id="@+id/verifyinsurance_button"
-        style="@style/Widget.Material3.Button.OutlinedButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="Verify Insurance"
-        android:textColor="@color/background"
-        android:textSize="12sp"
-        app:cornerRadius="5dp"
-        app:layout_constraintBottom_toBottomOf="@+id/verifydl_button"
-        app:layout_constraintStart_toEndOf="@+id/verifydl_button"
-        app:layout_constraintTop_toTopOf="@+id/verifydl_button"
-        app:strokeColor="@color/background" />
+        <Button
+            android:id="@+id/verifydl_button"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="Verify DL"
+            android:textColor="@color/background"
+            android:textSize="12sp"
+            app:cornerRadius="5dp"
+            app:layout_constraintEnd_toStartOf="@id/verifyinsurance_button"
+            app:layout_constraintStart_toStartOf="@+id/cl_buttons"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/background" />
 
-    <Button
-        android:id="@+id/bookoffence_button"
-        style="@style/Widget.Material3.Button.IconButton.Filled"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:text="Book Offence"
-        android:textColor="@color/white"
-        android:textSize="12sp"
-        app:cornerRadius="5dp"
-        app:layout_constraintBottom_toBottomOf="@+id/verifyinsurance_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/verifyinsurance_button"
-        app:layout_constraintTop_toTopOf="@+id/verifyinsurance_button" />
+        <Button
+            android:id="@+id/verifyinsurance_button"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="12dp"
+            android:text="Verify Insurance"
+            android:textColor="@color/background"
+            android:textSize="12sp"
+            app:cornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/verifydl_button"
+            app:layout_constraintStart_toEndOf="@+id/verifydl_button"
+            app:layout_constraintTop_toTopOf="@+id/verifydl_button"
+            app:strokeColor="@color/background" />
+
+        <Button
+            android:id="@+id/bookoffence_button"
+            style="@style/Widget.Material3.Button.IconButton.Filled"
+            android:layout_width="130dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="Book Offence"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:cornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="@+id/verifyinsurance_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/verifyinsurance_button"
+            app:layout_constraintTop_toTopOf="@+id/verifyinsurance_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/offencestablayout"
@@ -339,7 +350,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/verifydl_button">
+        app:layout_constraintTop_toBottomOf="@+id/cl_buttons">
 
     </com.google.android.material.tabs.TabLayout>
 
