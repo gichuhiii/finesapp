@@ -30,11 +30,7 @@ class OffensesListAdapter : ListAdapter<Offense, OffensesListAdapter.OffensesVie
                 tvStatus.text = offense.paymentStatus
             }
         }
-
     }
-
-
-
 }
     private val offensesDiffCallback =
     object : DiffUtil.ItemCallback<Offense>() {
