@@ -107,8 +107,8 @@
     <Button
         android:id="@+id/btn_changebtn"
         style="@style/Widget.Material3.Button.IconButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="206dp"
+        android:layout_height="65dp"
         android:layout_marginTop="116dp"
         android:text="Change Password"
         android:textColor="@color/black"
