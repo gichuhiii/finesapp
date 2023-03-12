@@ -15,6 +15,7 @@ class PaidOffencesFragment : Fragment() {
     private lateinit var binding: FragmentPaidOffencesBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         arguments?.let {
 
@@ -22,6 +23,7 @@ class PaidOffencesFragment : Fragment() {
     }
 
     override fun onCreateView(
+
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
@@ -30,6 +32,7 @@ class PaidOffencesFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
         super.onViewCreated(view, savedInstanceState)
         setUpUI()
     }
